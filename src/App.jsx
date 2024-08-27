@@ -10,6 +10,7 @@ import LayoutAdmin from "./layouts/LayoutAdmin";
  import ForgetPassword from "./pages/auth/ForgetPassword";
  // Pages admin
  import Home from "./pages/admin/Home"
+ import Profile from "./pages/admin/Profile";
  import Chat from "./pages/admin/Chat";
  import Error404 from "./pages/Error404";
 
@@ -18,14 +19,13 @@ function App() {
   return ( 
   <BrowserRouter>
   <Routes>
-    <Route path="/auth" element={<LayoutAuth/>}>
-      <Route index element={<Login />}/>
-      <Route path="registro" element={<Register/>}/>
-      <Route path="olvide-password" element={<ForgetPassword />}/>
-    </Route>
-    <Route path="/" element={<LayoutAdmin/>}>
-      <Route index element={<Home/>} />
-      <Route path="chat" element={<Chat/>} />
+      <Route path="/login" element={<Login />}/>
+      <Route path="/registro" element={<Register/>}/>
+      <Route path="/olvide-password" element={<ForgetPassword />}/>
+      <Route path="/" element={<LayoutAdmin/>}>   
+        <Route index element={<Home/>} />
+        <Route path="chat" element={<Chat/>} />
+        <Route path="perfil" element={<Profile/>} />
     </Route>
     <Route path="*" element={<Error404 />}/>
   </Routes>

@@ -17,7 +17,9 @@ export const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
 
-  return <div className="bg-secondary-100 p-8 rounded-xl shadow-2xl w-auto lg:w-[450px] ">
+  return (
+    <div className="min-h-screen flex items-center justify-center p-4">
+        <div className="bg-secondary-100 p-8 rounded-xl shadow-2xl w-auto lg:w-[450px] ">
   <h1 className="text-3xl text-center uppercase font-bold tracking-[5px] text-white mb-8">
     Crear <span className='text-primary'>Cuenta</span>
     </h1>
@@ -107,13 +109,16 @@ export const Register = () => {
     <span className="flex items-center justify-center gap-2">
       ¿Ya tienes cuenta? {" "}
       <Link 
-        to="/auth" 
+        to="/login" 
         className="text-primary hover:text-gray-100 transition-colors">
         Ingresa
       </Link>
     </span>
 </div>
 
+    </div>
+
+  )
 }
 
 export default Register;

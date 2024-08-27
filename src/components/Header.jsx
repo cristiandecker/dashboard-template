@@ -115,7 +115,7 @@ export const Header = () => {
             </Link>
           </MenuItem>
           <MenuItem className="p-0 hover:bg-transparent">
-            <Link to="/perfil" className='rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 flex items-center gap-x-4 py-2 px-6 flex-1' >
+            <Link to="/login" className='rounded-lg transition-colors text-gray-300 hover:bg-secondary-900 flex items-center gap-x-4 py-2 px-6 flex-1' >
               <RiLogoutCircleLine/> Cerrar sesión
             </Link>
           </MenuItem>
